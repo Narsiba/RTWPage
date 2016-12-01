@@ -1,0 +1,25 @@
+.navbar {
+   background: rgb(0, 103, 51); /* The Fallback */
+   background:rgba(0, 103, 51, 0.0);   /* for latest browsers */
+   font-family: 'Patua One', cursive;
+   font-size: 24px;
+}
+
+.flex_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-line {
+  padding:
+
+}
