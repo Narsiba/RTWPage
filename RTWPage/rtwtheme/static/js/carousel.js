@@ -6,7 +6,7 @@
 jQuery(document).ready(function() {
 	$('.carousel').carousel({
     	pause: "false",
-    	interval: 20000
+    	interval: 2000
 	});
 
 	$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});

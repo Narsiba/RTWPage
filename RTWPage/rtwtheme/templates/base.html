@@ -24,12 +24,11 @@
 <!-- Custom styles for this template -->
 <!--<link href="{% static "css/carousel.css" %}" rel="stylesheet">-->
 <link href="{% static "css/theme.css" %}" rel="stylesheet">
-<link href="{% static "css/jquery.carousel.fullscreen.css" %}" rel="stylesheet">
+<link href="{% static "css/carousel.fullscreen.css" %}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 
 {% block extra_css %}{% endblock %}
 {% endcompress %}
-
 
 
 <!--[if lt IE 9]>
@@ -75,7 +74,10 @@
 {% block all_content %}
 {% endblock %}
 
+{% block main %}
+{% endblock %}
 
+<footer>
     <!-- FOOTER -->
 
 
@@ -90,10 +92,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
   <script src={% static "js/carousel.js" %}
-  {% block extra_js %}{% endblock %}
+  {% block extra_js %}
+
+  {% endblock %}
   {% endcompress %}
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+
+</footer>
+
+{% block footer_js %}
+{% include "includes/footer_scripts.html" %}
+{% endblock %}
 </body>
 </html>
