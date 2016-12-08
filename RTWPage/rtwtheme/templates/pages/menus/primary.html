@@ -1,0 +1,29 @@
+{% load pages_tags i18n %}
+
+<div class="nav navbar-nav  flex_nav">
+
+    {% for page in page_branch %}
+    {% if page.in_menu %}
+    <a class="nav-item nav-link {% if page.is_current_or_ascendant %} active {% endif %} {% if forloop.last %} last {% endif %}" href="{{ page.get_absolute_url }}">{{ page.title }}<span class="sr-only">(current)</span></a>
+    {% if forloop.counter == 2 %}
+    <a class="navbar-brand" href="#">Navbar</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>
+
+<!--<form class="form-inline pull-xs-right">
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>-->
+
+<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+  &#9776;
+</button>-->
+
+<!--<div class="collapse" id="navbar-header">
+  <div class="container-fluid bg-inverse p-a-1">
+    <h3>Collapsed content</h3>
+    <p>Toggleable via the navbar brand.</p>
+  </div>
+</div>-->
