@@ -14,7 +14,7 @@
 			ajaxcallback: function() {},
 			slideshow: 5000, /* false OR interval time in ms */
 			autoplay_slideshow: false, /* true/false */
-			opacity: 0.50, /* Value between 0 and 1 */
+			opacity: 0.8, /* Value between 0 and 1 */
 			show_title: true, /* true/false */
 			allow_resize: true, /* Resize the photos bigger than viewport. true/false */
 			allow_expand: true, /* Allow the user to expand a resized image. true/false */

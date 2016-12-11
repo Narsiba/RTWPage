@@ -1,8 +1,13 @@
 .navbar {
-   background: rgb(0, 103, 51); /* The Fallback */
-   background:rgba(0, 103, 51, 0.0);   /* for latest browsers */
+   background: rgb(0, 0, 0); /* The Fallback */
+   background:rgba(0, 0, 0, .0);   /* for latest browsers */
    font-family: 'Patua One', cursive;
    font-size: 24px;
+}
+
+.navbar-gallery {
+  background: rgb(0, 0, 0); /* The Fallback */
+  background:rgba(0, 0, 0, .8);   /* for latest browsers */  
 }
 
 .flex_nav {
@@ -22,4 +27,15 @@
 .welcome-line {
   padding:
 
+}
+
+.card-columns {
+  background-color: black;
+  padding: 0.5%;
+  padding-top: 70px;
+
+}
+
+.card {
+    border-color: black
 }

@@ -43,15 +43,21 @@
 <body id="{% block body_id %}body{% endblock %}">
 
   <!--header-->
+
   <!-- Fixed Top-Navbar
   ================================================== -->
+{% block navigation %}
   <div class="pos-f-t">
      <div class="navbar navbar-static-top navbar-dark navbar-transparent bg-faded" >
         {% page_menu "pages/menus/primary.html" %}
     </div>
   </div>
+{% endblock navigation %}
 
   <!--header-->
+
+{% block card_layout %}
+{% endblock card_layout %}
 
 {% block all_content %}
 {% endblock %}
@@ -76,14 +82,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
   <script src="{% static "js/carousel.js" %}"></script>
   <script src="{% static "js/jquery.prettyPhoto.js" %}" type="text/javascript" charset="utf-8"></script>
+
   {% block extra_js %}
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function(){
       $("a[rel^='prettyPhoto']").prettyPhoto();
     });
   </script>
-
   {% endblock %}
+
   {% endcompress %}
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
