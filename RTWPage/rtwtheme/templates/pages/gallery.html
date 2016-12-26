@@ -7,13 +7,6 @@
 
 <!-- Fixed Top-Navbar (different bg for galleries)
 ================================================== -->
-{% block navigation %}
-<div class="pos-f-t">
-   <div class="navbar navbar-static-top navbar-dark navbar-gallery">
-      {% page_menu "pages/menus/primary.html" %}
-  </div>
-</div>
-{% endblock navigation %}
 
 {% block card_layout %}
 {% endblock %}
@@ -26,12 +19,12 @@
 {% endeditable %}
 </div>-->
 
-<div class="card-columns">
+<div class="card-columns content-padding">
 {% with page.gallery.images.all as images %}
 {% for image in images %}
   <div class="card">
       <a rel="prettyPhoto" title="{{ image.description }}" href="{{ MEDIA_URL }}{% thumbnail image.file 1200 0 %}">
-      <img class="card-img img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="Gallery Name" /></a>
+      <img class="card-img img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="Gallery Name"></a>
   </div>
 {% endfor %}
 {% endwith %}

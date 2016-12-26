@@ -19,7 +19,7 @@
 
 {% compress css %}
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap-flex.min.css" integrity=""sha384-CK4EBuhY67FrbSPR73vSI3bibY4Cm7Yo5knhqTCR3hk/IYVGqE1SWjbOhQ9/2Uqp"" crossorigin="anonymous">
 
 <!-- Custom styles for this template -->
 <!--<link href="{% static "css/carousel.css" %}" rel="stylesheet">-->
@@ -46,13 +46,16 @@
 
   <!-- Fixed Top-Navbar
   ================================================== -->
-{% block navigation %}
+  {% block navigation %}
   <div class="pos-f-t">
-     <div class="navbar navbar-static-top navbar-dark navbar-transparent bg-faded" >
+     <div class="navbar navbar-static-top navbar-dark navbar-gallery">
         {% page_menu "pages/menus/primary.html" %}
     </div>
   </div>
-{% endblock navigation %}
+  <div class ="navbar-spacer">
+     &nbsp;
+  </div>
+  {% endblock navigation %}
 
   <!--header-->
 

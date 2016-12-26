@@ -1,25 +1,27 @@
 {% extends 'pages/page.html' %}
 
-{% load static from staticfiles %}
-{% load mezzanine_tags %}
-{% load blog_tags pages_tags %}
+{% load pages_tags mezzanine_tags staticfiles %}
 
 {% block card_layout %}
-<div class="card-deck-wrapper">
-  <div class="card-deck">
-      {% for card in cards %}
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">{{ card.title }}</h4>
-        </div>
-          {% with card.gallery.images.all|first as image %}
-          <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="Card image cap">
-        <div class="card-block">
-          {% endwith %}
-          <p class="card-text">{{ card.gallery.content }}</p>
-        </div>
-    </div>
-    {% endfor %}
+
+<div class="card-deck content-padding">
+{% for card in cards %}
+{% with card.gallery.images.all|first as image %}
+  <div class="card mb-2">
+      <a href="{{ card.get_absolute_url }}">
+      <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{% thumbnail image.file 1000 650 %}" alt="Name"></a>
+      <div class="card-block">
+        <h4 class="card-title">{{ card.title }}</h4>
+        <p class="card-text">{{ card.gallery.content|richtext_filters|safe }}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
   </div>
+{% endwith %}
+{% endfor %}
 </div>
+
 {% endblock %}
+<!--<div class="card-img-overlay">
+    <h4 class="card-title">{{ card.title }}</h4>
+    <p class="card-text">{{ card.gallery.content|richtext_filters|safe }}</p>
+</div>-->

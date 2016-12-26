@@ -12,13 +12,13 @@ class HomePage(Page, RichText):
     A page representing the format of the home page
     '''
     topheading = models.CharField(max_length=200,
-        help_text="The top heading of the carousel caption", default="We currently are in:")
+        help_text="The top heading of the carousel caption", blank=True)
     headline = models.CharField(max_length=200,
-        help_text="The Headline in the middle of the carousel caption", default="Switzerland")
+        help_text="The Headline in the middle of the carousel caption", blank=True)
     subheading = models.CharField(max_length=200,
-        help_text="The subheading of the carousel caption", blank=True, null=True)
+        help_text="The subheading of the carousel caption", blank=True)
     buttontext = models.CharField(max_length=200,
-        help_text="The text on the button to enter the page", default="Enter")
+        help_text="The text on the button to enter the page", blank=True)
 #    featured_pictures_heading = models.CharField(max_length=200,
 #        default="Featured Pictures")
 #    featured_portfolio = models.ForeignKey("Portfolio", blank=True, null=True,
@@ -58,12 +58,3 @@ class Slide(Orderable):
 #    content = models.TextField()
 #    link = models.CharField(max_length=2000, blank=True,
 #        help_text="Optional, if provided clicking the blurb will go here.")
-
-
-class Portfolio(Page):
-    '''
-    A collection of individual portfolio items
-    '''
-    class Meta:
-        verbose_name = _("Portfolio")
-        verbose_name_plural = _("Portfolios")

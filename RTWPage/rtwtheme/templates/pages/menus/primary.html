@@ -1,6 +1,6 @@
 {% load pages_tags i18n %}
 
-<div class="nav navbar-nav  flex_nav">
+<div class="nav navbar-nav  flex-nav">
     {% for page in page_branch %}
         {% if page.in_menu %}
         <a class="nav-item nav-link {% if page.is_current_or_ascendant %} active {% endif %} {% if forloop.last %} last {% endif %}" href="{{ page.get_absolute_url }}">{{ page.title }}<span class="sr-only">(current)</span></a>
