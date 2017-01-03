@@ -7,7 +7,7 @@
 <div class="card-deck content-padding">
 {% for card in cards %}
 {% with card.gallery.images.all|first as image %}
-  <div class="card mb-2">
+  <div class="card mb-2" style="max-width: 33%;">
       <a href="{{ card.get_absolute_url }}">
       <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}{% thumbnail image.file 1000 650 %}" alt="Name"></a>
       <div class="card-block">

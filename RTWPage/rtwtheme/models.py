@@ -1,9 +1,13 @@
 from django.db import models
+from django.db.models.fields import URLField
+
+
 from django.utils.translation import ugettext_lazy as _
 
 from mezzanine.core.fields import FileField, RichTextField
 from mezzanine.core.models import RichText, Orderable, Slugged
 from mezzanine.pages.models import Page
+from mezzanine.galleries.models import Gallery
 from mezzanine.utils.models import upload_to
 
 # Create your models here.
@@ -44,6 +48,15 @@ class Slide(Orderable):
         upload_to=upload_to("theme.Slide.image", "slider"),
         format="Image", max_length=255, null=True, blank=True)
     title = models.CharField(max_length=50, default="Slide")
+
+class VideoURL(Orderable):
+    '''
+    A video-url in a list connected to a Gallery
+    '''
+    gallery = models.ForeignKey(Gallery, related_name="videos")
+    video_url = URLField(verbose_name=_("Video"), blank=True)
+    title = models.CharField(max_length=50, default="Video")
+
 
 
 #class IconBlurb(Orderable):

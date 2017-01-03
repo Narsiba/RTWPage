@@ -58,16 +58,19 @@ PAGE_MENU_TEMPLATES = (
 # ``django.models.db.`` can be omitted for regular Django model fields.
 #
 # EXTRA_MODEL_FIELDS = (
-#     (
+#         (
 #         # Dotted path to field.
 #         "mezzanine.blog.models.BlogPost.image",
+#           "mezzanine.galleries.models.Gallery.url",
 #         # Dotted path to field class.
-#         "somelib.fields.ImageField",
+#           "URLField",
 #         # Positional args for field class.
 #         (_("Image"),),
+#           ("YouTube",),
 #         # Keyword args for field class.
 #         {"blank": True, "upload_to": "blog"},
-#     ),
+#           {"blank": True},
+#           ),
 #     # Example of adding a field to *all* of Mezzanine's content types:
 #     (
 #         "mezzanine.pages.models.Page.another_field",

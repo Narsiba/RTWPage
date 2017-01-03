@@ -1,3 +1,4 @@
+
 .navbar {
    background: rgb(0, 0, 0); /* The Fallback */
    background:rgba(0, 0, 0, .0);   /* for latest browsers */
@@ -66,7 +67,7 @@
 }
 
 .card-deck {
-      justify-content: space-around;
+      justify-content: flex-start;
     }
 
 
@@ -89,7 +90,53 @@
     }
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background: rgb(0, 0, 0); /* The Fallback */
+  background:rgba(0, 0, 0, .8);   /* for latest browsers */
+}
 
-.card-text {
-  text-overflow: ellipsis;
+
+.follow_us {
+	text-align:right;
+	padding:3px 4px 9px 0;
+}
+follow_us ul li {
+	padding:0;
+	margin:0 0 0 5px;
+	display:inline-block;
+	line-height:30px;
+}
+.follow_us a {
+	background-image:url(../img/top_socials.png);
+	background-repeat:no-repeat;
+	height:30px;
+	width:30px;
+	display:inline-block;
+	text-indent:-9999px;
+	text-align:left;
+}
+.follow_us a.facebook {background-position:0 0;
+}
+.follow_us a.facebook:hover {background-position:0 -30px;
+}
+.follow_us a.vimeo {background-position:-35px 0;
+}
+.follow_us a.vimeo:hover {background-position:-35px -30px;
+}
+.follow_us a.tumbrl {background-position:-70px 0;
+}
+.follow_us a.tumbrl:hover {background-position:-70px -30px;
+}
+.follow_us a.twitter {background-position:-105px 0;
+}
+.follow_us a.twitter:hover {background-position:-105px -30px;
+}
+.follow_us a.delicious {background-position:-140px 0;
+}
+.follow_us a.delicious:hover {background-position:-140px -30px;
 }
