@@ -11,6 +11,7 @@
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<script src="https://use.fontawesome.com/d10a0d0138.js"></script>
 
 {% ifinstalled mezzanine.blog %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
@@ -62,7 +63,10 @@
 {% block card_layout %}
 {% endblock card_layout %}
 
-{% block all_content %}
+{% block blog %}
+{% endblock %}
+
+{% block carousel %}
 {% endblock %}
 
 {% block gallery %}
@@ -72,7 +76,7 @@
 
 
 
-  </div><!-- /.container -->
+  <!-- /.container -->
 
   <!-- FOOTER -->
   {% block footer %}

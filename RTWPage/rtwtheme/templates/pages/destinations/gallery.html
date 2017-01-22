@@ -16,15 +16,26 @@
 {% endeditable %}
 </div>-->
 
-<div class="card-columns content-padding">
+<div class="card-deck content-padding">
 {% with page.gallery.images.all as images %}
 {% for image in images %}
-  <div class="card">
-      <a rel="prettyPhoto[gallery1]" title="{{ image.description }}" href="{{ MEDIA_URL }}{% thumbnail image.file 1200 0 %}">
+    <div class="card mb-2" style="max-width: 33%;">
+      <a rel="prettyPhoto" title="{{ image.description }}" href="{{ MEDIA_URL }}{% thumbnail image.file 1200 0 %}">
       <img class="card-img img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="{{ page.gallery.title }}"></a>
   </div>
 {% endfor %}
 {% endwith %}
+{% with page.gallery.videos.all as videos %}
+{% for video in videos %}
+<div class="card mb-2 " style="max-width: 33%;">
+    <div class="embed-responsive embed-responsive-4by3">
+      <a title="{{ video.title }}" href="{{ video.video_url }}">
+      <iframe src="{{ video.video_url }}" allowfullscreen></iframe></a>
+    </div>
+</div>
+{% endfor %}
+{% endwith %}
+
 </div>
 </div>
 

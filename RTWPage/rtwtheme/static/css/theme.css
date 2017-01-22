@@ -1,14 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 
 .navbar {
    background: rgb(0, 0, 0); /* The Fallback */
    background:rgba(0, 0, 0, .0);   /* for latest browsers */
    font-family: 'Patua One', cursive;
    font-size: 24px;
+   border-radius: 0px;
 }
 
 .navbar-gallery {
-  background: rgb(0, 0, 0); /* The Fallback */
+  background: rgb(64, 64, 64); /* The Fallback */
   background:rgba(0, 0, 0, .8);   /* for latest browsers */
+  border-top:5px #d00b01 solid; /* Color and size of the line on top of page */
 }
 
 .nav-link {color: #f00;}
@@ -22,17 +29,50 @@
 
 }
 
+.tag a {
+  color: white;
+
+}
+
+.tag-default {
+  color: #d00b01;
+}
+
+.tag a:hover {
+  color: grey;
+}
+
+.flex-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+a {color: #000;}
+a:hover {
+  color: #d00b01;
+  text-decoration: none;
+}
+
+.blog-sort-bar {
+  background: #f7f7f9;
+  border-radius: 5px;
+}
+
+.btn-outline-danger {
+  color: #000;
+  border-color: #000;
+}
+
+.btn-outline-danger:hover {
+  background: #d00b01;
+  border-color: #d00b01;
+}
+
 .carousel-caption {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.navbar-spacer {
-  width: 100%;
-  height: 65px;
-
 }
 
 .content-padding {
@@ -41,6 +81,74 @@
   padding-top: 2%;
 }
 
+.navbar-spacer {
+  width: 100%;
+  height: 65px;
+
+}
+
+.card-outline-invisible {
+  border-color: transparent;
+
+}
+
+.fa-pencil {
+  color: #d00b01;
+}
+
+.fa-clock-o {
+  color: #d00b01;
+}
+
+.fa-comments {
+  color: #d00b01;
+}
+
+.floating-box {
+    display: inline-block;
+    margin: none;
+    float: right;
+}
+
+.floating-box-left {
+    display: inline-block;
+    margin: none;
+    float: left;
+    color: #d3d3d3;
+    margin-top: 10px;
+}
+hr.style3 {
+	border-top: 1px dashed #8c8b8b;
+}
+
+hr.style4 {
+	border-top: 1px solid #d3d3d3;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.img-holder {position: relative; display: inline-block;}
+.img-holder a img {display: block;}
+.img-holder a p {position: absolute; top: 50%; left: 0; right: 0; transform: translate(0, -50%); text-align: center; color: #fff; text-shadow: 0 0 15px;}
+
+.marginx-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.page-item a {
+  color: #d00b01
+}
+.page-item a:hover {
+  color: #d00b01
+}
+
+.text-muted > a {
+  color: #636c72;
+}
+.text-muted > a:hover {
+  color: #d00b01;
+}
 
 @media (min-width: 544px) {
     .card-columns {
@@ -91,12 +199,12 @@
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
-  background: rgb(0, 0, 0); /* The Fallback */
+  background: rgb(64, 64, 64); /* The Fallback */
   background:rgba(0, 0, 0, .8);   /* for latest browsers */
 }
 

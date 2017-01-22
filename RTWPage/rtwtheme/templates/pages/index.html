@@ -12,7 +12,7 @@
   </div>
 {% endblock navigation %}
 
-{% block all_content %}
+{% block carousel %}
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -37,7 +37,7 @@
         <h3>{{ page.homepage.topheading }}</h3>
         <h1>{{ page.homepage.headline }}</h1>
         <p>{{ page.homepage.subheading }}</p>
-        <p><a class="btn btn-lg btn-danger" href="#" role="button">{{ page.homepage.buttontext }}</a></p>
+        <p><a class="btn btn-lg btn-danger" href="{% url rtwtheme:destinations %}" role="button">{{ page.homepage.buttontext }}</a></p>
       {% endeditable %}
     </div>
   </div>
