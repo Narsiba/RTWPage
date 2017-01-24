@@ -8,7 +8,7 @@
 <!-- Fixed Top-Navbar (different bg for galleries)
 ================================================== -->
 
-{% block gallery %}
+{% block main %}
 {{ block.super }}
 
 <!--{% editable page.gallery.content %}
@@ -20,7 +20,7 @@
 {% with page.gallery.images.all as images %}
 {% for image in images %}
   <div class="card">
-      <a rel="prettyPhoto[gallery1]" title="{{ image.description }}" href="{{ MEDIA_URL }}{% thumbnail image.file 1200 0 %}">
+      <a rel="prettyPhoto[gallery1]" title="{{ image.description }}" href="{{ MEDIA_URL }}{% thumbnail image.file 800 0 %}">
       <img class="card-img img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="{{ page.gallery.title }}"></a>
   </div>
 {% endfor %}
@@ -30,4 +30,4 @@
 
 
 {{ block.super }}
-{% endblock gallery %}
+{% endblock main %}

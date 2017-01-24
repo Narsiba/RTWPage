@@ -3,24 +3,27 @@ html {
   min-height: 100%;
 }
 
-
 .navbar {
    background: rgb(0, 0, 0); /* The Fallback */
    background:rgba(0, 0, 0, .0);   /* for latest browsers */
-   font-family: 'Patua One', cursive;
-   font-size: 24px;
+   font-family: 'Arial', cursive;
+   font-size: 14px;
    border-radius: 0px;
 }
 
 .navbar-gallery {
   background: rgb(64, 64, 64); /* The Fallback */
   background:rgba(0, 0, 0, .8);   /* for latest browsers */
-  border-top:5px #d00b01 solid; /* Color and size of the line on top of page */
+  border-top: 2.5px #d00b01 solid; /* Color and size of the line on top of page */
 }
 
-.nav-link {color: #f00;}
-.nav-link:hover {color: red;}
 
+.nav-link a {color: white;}
+.nav-link a:hover {color: red;}
+
+.dropdown-menu a {color: grey;}
+.dropdown-menu a:hover {color: red;}
+a.dropdown-toggle {text-decoration: none;}
 
 .flex-nav {
   display: flex;
@@ -47,6 +50,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 a {color: #000;}
 a:hover {
   color: #d00b01;
@@ -77,20 +81,28 @@ a:hover {
 
 .content-padding {
   background-color: ;
-  padding: 1%;
+  padding: 10px;
   padding-top: 2%;
 }
 
 .navbar-spacer {
   width: 100%;
-  height: 65px;
+  height: 60px;
 
+}
+
+.blog-card {
+  color: white;
+  position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .card-outline-invisible {
   border-color: transparent;
 
 }
+
 
 .fa-pencil {
   color: #d00b01;
@@ -150,6 +162,7 @@ hr.style4 {
   color: #d00b01;
 }
 
+
 @media (min-width: 544px) {
     .card-columns {
         -webkit-column-count: 2;
@@ -179,22 +192,32 @@ hr.style4 {
     }
 
 
-@media (min-width: 544px) {
+@media (min-width: 576px) {
 .card-deck .card {
-      display: block;
-      flex-basis: 33.3%;
+      /*display: block;*/
+      /*flex-basis: 33.3%;*/
+      max-width: calc(50% - 20px);
             }
 }
-@media (min-width: 768px) {
+@media (min-width: 840px) {
+.card-deck .card {
+      display: block;
+      flex-basis: 20%;
+      max-width: calc(33.3333% - 20px);
+    }
+}
+
+/*@media (min-width: 992px) {
 .card-deck .card {
       display: block;
       flex-basis: 20%;
     }
-}
-@media (min-width: 992px) {
+}*/
+@media (min-width: 1110px) {
 .card-deck .card {
       display: block;
       flex-basis: 15%;
+      max-width: calc(25% - 20px);
     }
 }
 
@@ -209,16 +232,10 @@ hr.style4 {
 }
 
 
-.follow_us {
-	text-align:right;
-	padding:3px 4px 9px 0;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-follow_us ul li {
-	padding:0;
-	margin:0 0 0 5px;
-	display:inline-block;
-	line-height:30px;
-}
+
 .follow_us a {
 	background-image:url(../img/top_socials.png);
 	background-repeat:no-repeat;

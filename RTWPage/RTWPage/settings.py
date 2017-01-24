@@ -48,6 +48,8 @@ PAGE_MENU_TEMPLATES = (
 (3, _("Footer"), "pages/menus/footer.html"),
  )
 
+
+
 # A sequence of fields that will be injected into Mezzanine's (or any
 # library's) models. Each item in the sequence is a four item sequence.
 # The first two items are the dotted path to the model and its field
