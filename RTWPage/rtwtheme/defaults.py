@@ -21,11 +21,11 @@ register_setting(
 
 register_setting(
     name="SOCIAL_LINK_YOUTUBE",
-    label=("Vimeo link"),
-    description=("If present a vimeo icon linking here will be in the "
+    label=("Youtube link"),
+    description=("If present a YouTube icon linking here will be in the "
         "footer."),
     editable=True,
-    default="https://vimeo.com/mezzatheme",
+    default="https://youtube.com/mezzatheme",
 )
 
 register_setting(

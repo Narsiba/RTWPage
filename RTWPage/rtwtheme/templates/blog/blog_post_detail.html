@@ -109,7 +109,7 @@
 {% block blog_post_detail_related_posts %}
 {% if related_posts %}
 <div class="card-block" id="related-posts">
-<h3 class="text-center mb-1">{% trans 'You might also like' %}</h3>
+<h3 class="text-center mb-3">{% trans 'You might also like' %}</h3>
 <div class="flex-images">
 {% for post in related_posts|slice:":3" %}
 <div class="img-holder marginx-10 my-1">
@@ -144,10 +144,9 @@
         <a class="page-link" href="{{ next.get_absolute_url }}">Next &rarr;</a>
     </li>
     {% endif %}
+    {% endwith %}
     </ul>
     </nav>
-
-{% endwith %}
 {% endblock %}
 
 

@@ -50,9 +50,9 @@
       {% block blog_post_list_filterinfo %}
       <div class="container">
         <div class="blog-sort-bar">
-        <div class="row mt-1">
+        <div class="row m-3">
           <div class="col-sm-12">
-        <div class="m-1">
+        <div class="m-3">
         {% if tag %}
             {% trans "Viewing posts tagged" %} {{ tag }}
         {% else %}{% if category %}
@@ -177,8 +177,9 @@
         </div>
         </div>
     {% endfor %}
-
+<div class="text-center">
 {% pagination_for blog_posts %}
+</div>
 </div>
 
 
