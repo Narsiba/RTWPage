@@ -62,7 +62,7 @@
             {{ year }}
         {% else %}{% if author %}
             {% trans "Viewing posts by" %}
-            <span class="tag tag-pill tag-default">{{ author.get_full_name|default:author.username }}</span>
+            {{ author.get_full_name|default:author.username }}
         {% endif %}{% endif %}{% endif %}{% endif %}
           / <a href="{% url "blog_post_list" %}">See all posts</a>
         {% endblock blog_post_list_filterinfo %}
@@ -88,7 +88,7 @@
   <div class="row">
     <div class="col-sm-8">
       {% for blog_post in blog_posts.object_list %}
-      <div class="card my-1">
+      <div class="card mb-3">
         <div class="card-block">
           <div class="text-xs-center mb-1">
              {% block blog_post_list_post_title %}

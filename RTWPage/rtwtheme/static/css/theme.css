@@ -1,13 +1,26 @@
 html {
-  position: relative;
-  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+  flex: 0 0 auto;
+}
+
+.main-content {
+  flex: 1 0 auto;
 }
 
 .navbar {
    background: rgb(0, 0, 0); /* The Fallback */
    background:rgba(0, 0, 0, .0);   /* for latest browsers */
-   font-family: 'Arial', cursive;
-   font-size: 14px;
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
    border-radius: 0px;
 }
 
@@ -17,31 +30,28 @@ html {
   border-top: 2.5px #d00b01 solid; /* Color and size of the line on top of page */
 }
 
-
-.nav-link a {color: white;}
-.nav-link a:hover {color: red;}
-
-.dropdown-menu a {color: grey;}
-.dropdown-menu a:hover {color: red;}
-a.dropdown-toggle {text-decoration: none;}
-
 .flex-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
+    display: flex;             /* establish flex container */
+    align-items: center;       /* center ul container vertically */
+    justify-content: center;   /* center ul container horizontally (optional) */
 }
 
-.tag a {
+/*.nav-item a {color: white;}
+.nav-item a:hover  {color: #d00b01;}*/
+
+.dropdown-menu a {color: grey;}
+.dropdown-menu a:hover {color: #d00b01;}
+a.dropdown-toggle {text-decoration: none;}
+
+.badge-danger {
+  color: #d00b01;
+}
+.badge a {
   color: white;
 
 }
 
-.tag-default {
-  color: #d00b01;
-}
-
-.tag a:hover {
+.badge a:hover {
   color: grey;
 }
 
@@ -82,14 +92,14 @@ a:hover {
 .content-padding {
   background-color: ;
   padding: 10px;
-  padding-top: 2%;
 }
 
 .navbar-spacer {
   width: 100%;
-  height: 60px;
+  height: 100px;
 
 }
+
 
 .blog-card {
   color: white;
@@ -187,23 +197,19 @@ hr.style4 {
     }
 }
 
-.card-deck {
-      justify-content: flex-start;
-    }
 
-
-@media (min-width: 576px) {
-.card-deck .card {
-      /*display: block;*/
-      /*flex-basis: 33.3%;*/
-      max-width: calc(50% - 20px);
-            }
-}
-@media (min-width: 840px) {
+@media (min-width: 594px) {
 .card-deck .card {
       display: block;
-      flex-basis: 20%;
-      max-width: calc(33.3333% - 20px);
+      flex-basis: 250px;
+      max-width: calc(50% - 32px);
+            }
+}
+@media (min-width: 876px) {
+.card-deck .card {
+      display: block;
+      flex-basis: 250px;
+      max-width: calc(33.3333% - 32px);
     }
 }
 
@@ -213,16 +219,16 @@ hr.style4 {
       flex-basis: 20%;
     }
 }*/
-@media (min-width: 1110px) {
+@media (min-width: 1156px) {
 .card-deck .card {
       display: block;
-      flex-basis: 15%;
-      max-width: calc(25% - 20px);
+      flex-basis: 250px;
+      max-width: calc(25% - 32px);
     }
 }
 
 .footer {
-  position: relative;
+  flex: 0 0 auto;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -231,10 +237,15 @@ hr.style4 {
   background:rgba(0, 0, 0, .8);   /* for latest browsers */
 }
 
+.footer .copyright {
+  background: rgba(0, 0, 0, 0.2);   /* for latest browsers */
+}
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .follow_us a {
 	background-image:url(../img/top_socials.png);

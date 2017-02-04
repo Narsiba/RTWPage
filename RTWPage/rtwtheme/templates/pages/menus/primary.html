@@ -1,4 +1,5 @@
 {% load pages_tags i18n %}
+{% load static from staticfiles %}
 <!--
 <div class="nav navbar-nav  flex-nav">
     {% for page in page_branch %}
@@ -16,11 +17,12 @@
 {% if page_branch_in_menu %}
 
 {% if branch_level == 0 %}
-<div class="collapse navbar-toggleable-xs" id="collapseEx2">
- <ul class="nav navbar-nav">
+<a class="navbar-brand" href="/"><img src="{% static "img/NinjabunnyLogosmwhite.png" %}" /></a>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
     {% for page in page_branch %}
     {% if page.in_menu %}
-    <li class="nav-item {% if page.has_children_in_menu %}btn-group{% endif %}
+    <li class="nav-item {% if page.has_children_in_menu %}dropdown{% endif %}
                {% if page.is_current_or_ascendant %}active{% endif %}" id="{{ page.html_id }}">
         <a class="nav-link" href="{{ page.get_absolute_url }}"
         {% if page.has_children_in_menu %}
@@ -31,7 +33,7 @@
     </li>
     {% endif %}
     {% endfor %}
-</ul>
+  </ul>
 </div>
 
 {% else %}

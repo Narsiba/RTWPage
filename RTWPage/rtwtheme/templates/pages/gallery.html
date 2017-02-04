@@ -15,16 +15,17 @@
 {{ page.gallery.content|richtext_filters|safe }}
 {% endeditable %}
 </div>-->
-
+<div class="container-fluid">
 <div class="card-columns content-padding">
 {% with page.gallery.images.all as images %}
 {% for image in images %}
-  <div class="card">
+  <div class="mb-1">
       <a rel="prettyPhoto[gallery1]" title="{{ image.description }}" href="{{ MEDIA_URL }}{% thumbnail image.file 800 0 %}">
-      <img class="card-img img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="{{ page.gallery.title }}"></a>
+      <img class="img-fluid" src="{{ MEDIA_URL }}{{ image.file }}" alt="{{ page.gallery.title }}"></a>
   </div>
 {% endfor %}
 {% endwith %}
+</div>
 </div>
 </div>
 
