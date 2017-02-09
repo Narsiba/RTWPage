@@ -303,62 +303,6 @@ OPTIONAL_APPS = (
     PACKAGE_NAME_FILEBROWSER,
     PACKAGE_NAME_GRAPPELLI,
 )
-###################
-# HEROKU SETTINGS #
-###################
-
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
-##################
-# DJANGO         #
-##################
-SECRET_KEY = "3x&r!k##=56=396_z8!c=snt$h#$f(df%$3bg)g$wo75ypjx0r"
-NEVERCACHE_KEY = "=v4un6!ya!_ww&!12@3(v2!u$uvj0cl!un2@jm%dweeclj8p*l"
-
-###################
-# S3 STATIC FILES #
-###################
-
-#AWS_QUERYSTRING_AUTH = False
-#AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-#AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-#AWS_STORAGE_BUCKET_NAME = 'sgfindingninjabunny'
-#AWS_S3_SIGNATURE_VERSION = 's3v4'
-#AWS_S3_REGION_NAME = 'eu-central-1'
-#AWS_PRELOAD_METADATA = True #helps collectstatic do updates
-
-#STATICFILES_LOCATION = 'static'
-#STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-#STATIC_URL = "https://%s/%s/" % (AWS_STORAGE_BUCKET_NAME, STATICFILES_LOCATION)
-
-
-#DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-#MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-#STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-
-#ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
-
-#MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-###########
-# LOGGING #
-###########
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': True,
-}
 
 ##################
 # LOCAL SETTINGS #
