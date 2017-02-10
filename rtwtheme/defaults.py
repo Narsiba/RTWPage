@@ -1,4 +1,4 @@
-"""Einstellungen für Social Media Links, die via Admin bearbeitet werden können"""
+"""Einstellungen fuer Social Media Links, die via Admin bearbeitet werden koennen"""
 from mezzanine.conf import register_setting
 
 register_setting(
