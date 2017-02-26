@@ -253,7 +253,6 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    "storages",
     "gunicorn",
 
     # "mezzanine.accounts",
